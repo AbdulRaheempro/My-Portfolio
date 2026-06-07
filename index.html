@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Raheem — AI Engineer & Generative AI Developer</title>
+  <meta name="description" content="Abdul Raheem is a results-driven AI Engineer and Generative AI Developer specializing in LangChain, RAG systems, Machine Learning, Deep Learning, Computer Vision, and NLP. Based in Lahore, Pakistan." />
+  <meta name="keywords" content="Abdul Raheem, AI Engineer, Generative AI Developer, Machine Learning, Deep Learning, LangChain, RAG, Computer Vision, NLP, LangGraph, Pakistan" />
+  <meta name="author" content="Abdul Raheem" />
+  <meta property="og:title" content="Abdul Raheem — AI Engineer & Generative AI Developer" />
+  <meta property="og:description" content="Results-driven AI Developer specializing in Generative AI, RAG systems, LangChain, and Machine Learning." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress"></div>
+
+<!-- Particles Background -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Navigation -->
+<nav id="navbar" class="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>AR<span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#github" class="nav-link">GitHub</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="theme-icon"></i>
+      </button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-container">
+    <div class="hero-content" data-aos="fade-right">
+      <div class="hero-badge">
+        <i class="fas fa-circle-dot pulse-dot"></i>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">Abdul <span class="gradient-text">Raheem</span></h1>
+      <div class="hero-title-wrapper">
+        <span class="hero-prefix">I am a </span>
+        <span class="typed-text" id="typed-text"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-location"><i class="fas fa-location-dot"></i> Lahore, Pakistan</p>
+      <p class="hero-description">
+        Results-driven Artificial Intelligence Developer specializing in Generative AI, RAG systems, LangChain, LangGraph, Machine Learning, Deep Learning, Computer Vision, and NLP. Passionate about building intelligent systems that solve real-world problems.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View Projects
+        </a>
+        <a href="resume.html" target="_blank" class="btn btn-secondary" id="download-btn">
+          <i class="fas fa-file-pdf"></i> View & Print Resume
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/AbdulRaheempro" target="_blank" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abdul-raheem-b47531286/" target="_blank" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:abdulraheemstd@gmail.com" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-image-wrapper" data-aos="fade-left">
+      <div class="hero-image-glow"></div>
+      <div class="hero-image-ring ring-1"></div>
+      <div class="hero-image-ring ring-2"></div>
+      <div class="hero-image-ring ring-3"></div>
+      <div class="hero-image-container">
+        <img src="profile.jpg" alt="Abdul Raheem — AI Engineer" class="hero-image" />
+      </div>
+      <div class="hero-floating-badge badge-1">
+        <i class="fas fa-brain"></i> AI
+      </div>
+      <div class="hero-floating-badge badge-2">
+        <i class="fas fa-robot"></i> GenAI
+      </div>
+      <div class="hero-floating-badge badge-3">
+        <i class="fas fa-code"></i> Python
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll Down</span>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Who I Am</span>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      <p class="section-subtitle">Passionate AI developer bridging research and real-world applications</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-image-side" data-aos="fade-right">
+        <div class="about-image-frame">
+          <img src="profile.jpg" alt="Abdul Raheem" class="about-image" />
+          <div class="about-image-overlay"></div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card" data-counter="15">
+            <span class="stat-number counter">15</span><span class="stat-plus">+</span>
+            <span class="stat-label">AI Projects</span>
+          </div>
+          <div class="stat-card" data-counter="5">
+            <span class="stat-number counter">5</span><span class="stat-plus">+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-card" data-counter="2">
+            <span class="stat-number counter">2</span><span class="stat-plus">+</span>
+            <span class="stat-label">Years Learning</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content-side" data-aos="fade-left">
+        <h3 class="about-hello">Hello! I'm Abdul Raheem 👋</h3>
+        <p class="about-text">
+          I am an Artificial Intelligence Developer with expertise in Machine Learning, Deep Learning, Computer Vision, NLP, and Generative AI. I enjoy building end-to-end AI applications using LangChain, LangGraph, Retrieval-Augmented Generation (RAG), and transformer architectures.
+        </p>
+        <p class="about-text">
+          My goal is to create impactful AI solutions that bridge research and real-world applications. Currently pursuing my B.Sc. in Computer Science at the University of Management and Technology (UMT), specializing in AI and Machine Learning.
+        </p>
+        <div class="about-info-grid">
+          <div class="info-item">
+            <i class="fas fa-user-graduate"></i>
+            <div>
+              <span class="info-label">Education</span>
+              <span class="info-value">B.Sc. CS @ UMT</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span class="info-label">Location</span>
+              <span class="info-value">Lahore, Pakistan</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="info-label">Email</span>
+              <span class="info-value">abdulraheemstd@gmail.com</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-language"></i>
+            <div>
+              <span class="info-label">Languages</span>
+              <span class="info-value">Urdu · English · German A1</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-cta">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-handshake"></i> Let's Collaborate</a>
+          <a href="https://github.com/AbdulRaheempro" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Expertise</span>
+      <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+      <p class="section-subtitle">A comprehensive toolkit for building intelligent AI systems</p>
+    </div>
+    <div class="skills-filter" data-aos="fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ai">Generative AI</button>
+      <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      <button class="filter-btn" data-filter="dl">Deep Learning</button>
+      <button class="filter-btn" data-filter="prog">Programming</button>
+      <button class="filter-btn" data-filter="tools">Tools</button>
+    </div>
+    <div class="skills-grid" id="skills-grid">
+      <!-- Generative AI -->
+      <div class="skill-card" data-category="ai" data-aos="fade-up" data-aos-delay="50">
+        <div class="skill-icon-wrap"><i class="fas fa-link-slash"></i></div>
+        <h4>LangChain</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 92%"></div></div>
+        <span class="skill-percent">92%</span>
+      </div>
+      <div class="skill-card" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-icon-wrap"><i class="fas fa-diagram-project"></i></div>
+        <h4>LangGraph</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 85%"></div></div>
+        <span class="skill-percent">85%</span>
+      </div>
+      <div class="skill-card" data-category="ai" data-aos="fade-up" data-aos-delay="150">
+        <div class="skill-icon-wrap"><i class="fas fa-database"></i></div>
+        <h4>RAG Systems</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 90%"></div></div>
+        <span class="skill-percent">90%</span>
+      </div>
+      <div class="skill-card" data-category="ai" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill-icon-wrap"><i class="fas fa-wand-magic-sparkles"></i></div>
+        <h4>Prompt Engineering</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 88%"></div></div>
+        <span class="skill-percent">88%</span>
+      </div>
+      <div class="skill-card" data-category="ai" data-aos="fade-up" data-aos-delay="250">
+        <div class="skill-icon-wrap"><i class="fas fa-robot"></i></div>
+        <h4>LLM Chatbots</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 87%"></div></div>
+        <span class="skill-percent">87%</span>
+      </div>
+      <!-- Machine Learning -->
+      <div class="skill-card" data-category="ml" data-aos="fade-up" data-aos-delay="50">
+        <div class="skill-icon-wrap"><i class="fas fa-chart-line"></i></div>
+        <h4>Regression</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 88%"></div></div>
+        <span class="skill-percent">88%</span>
+      </div>
+      <div class="skill-card" data-category="ml" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-icon-wrap"><i class="fas fa-tags"></i></div>
+        <h4>Classification</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 85%"></div></div>
+        <span class="skill-percent">85%</span>
+      </div>
+      <div class="skill-card" data-category="ml" data-aos="fade-up" data-aos-delay="150">
+        <div class="skill-icon-wrap"><i class="fas fa-tree"></i></div>
+        <h4>Decision Trees</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 82%"></div></div>
+        <span class="skill-percent">82%</span>
+      </div>
+      <div class="skill-card" data-category="ml" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill-icon-wrap"><i class="fas fa-bolt"></i></div>
+        <h4>XGBoost</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 80%"></div></div>
+        <span class="skill-percent">80%</span>
+      </div>
+      <!-- Deep Learning -->
+      <div class="skill-card" data-category="dl" data-aos="fade-up" data-aos-delay="50">
+        <div class="skill-icon-wrap"><i class="fas fa-eye"></i></div>
+        <h4>CNN</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 88%"></div></div>
+        <span class="skill-percent">88%</span>
+      </div>
+      <div class="skill-card" data-category="dl" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-icon-wrap"><i class="fas fa-rotate"></i></div>
+        <h4>RNN / LSTM</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 82%"></div></div>
+        <span class="skill-percent">82%</span>
+      </div>
+      <div class="skill-card" data-category="dl" data-aos="fade-up" data-aos-delay="150">
+        <div class="skill-icon-wrap"><i class="fas fa-network-wired"></i></div>
+        <h4>GAN</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 75%"></div></div>
+        <span class="skill-percent">75%</span>
+      </div>
+      <div class="skill-card" data-category="dl" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill-icon-wrap"><i class="fas fa-glasses"></i></div>
+        <h4>Vision Transformers</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 80%"></div></div>
+        <span class="skill-percent">80%</span>
+      </div>
+      <div class="skill-card" data-category="dl" data-aos="fade-up" data-aos-delay="250">
+        <div class="skill-icon-wrap"><i class="fas fa-language"></i></div>
+        <h4>BERT</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 78%"></div></div>
+        <span class="skill-percent">78%</span>
+      </div>
+      <!-- Programming -->
+      <div class="skill-card" data-category="prog" data-aos="fade-up" data-aos-delay="50">
+        <div class="skill-icon-wrap"><i class="fab fa-python"></i></div>
+        <h4>Python</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 95%"></div></div>
+        <span class="skill-percent">95%</span>
+      </div>
+      <div class="skill-card" data-category="prog" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-icon-wrap"><i class="fas fa-cube"></i></div>
+        <h4>NumPy / Pandas</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 90%"></div></div>
+        <span class="skill-percent">90%</span>
+      </div>
+      <div class="skill-card" data-category="prog" data-aos="fade-up" data-aos-delay="150">
+        <div class="skill-icon-wrap"><i class="fas fa-gears"></i></div>
+        <h4>Scikit-Learn</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 88%"></div></div>
+        <span class="skill-percent">88%</span>
+      </div>
+      <!-- Frameworks -->
+      <div class="skill-card" data-category="prog" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill-icon-wrap"><i class="fas fa-fire"></i></div>
+        <h4>PyTorch</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 85%"></div></div>
+        <span class="skill-percent">85%</span>
+      </div>
+      <div class="skill-card" data-category="prog" data-aos="fade-up" data-aos-delay="250">
+        <div class="skill-icon-wrap"><i class="fas fa-brain"></i></div>
+        <h4>TensorFlow</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 82%"></div></div>
+        <span class="skill-percent">82%</span>
+      </div>
+      <div class="skill-card" data-category="prog" data-aos="fade-up" data-aos-delay="300">
+        <div class="skill-icon-wrap"><i class="fas fa-server"></i></div>
+        <h4>FastAPI</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 78%"></div></div>
+        <span class="skill-percent">78%</span>
+      </div>
+      <!-- Tools -->
+      <div class="skill-card" data-category="tools" data-aos="fade-up" data-aos-delay="50">
+        <div class="skill-icon-wrap"><i class="fab fa-git-alt"></i></div>
+        <h4>Git / GitHub</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 90%"></div></div>
+        <span class="skill-percent">90%</span>
+      </div>
+      <div class="skill-card" data-category="tools" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-icon-wrap"><i class="fas fa-book-open"></i></div>
+        <h4>Jupyter Notebook</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 95%"></div></div>
+        <span class="skill-percent">95%</span>
+      </div>
+      <div class="skill-card" data-category="tools" data-aos="fade-up" data-aos-delay="150">
+        <div class="skill-icon-wrap"><i class="fab fa-google"></i></div>
+        <h4>Google Colab</h4>
+        <div class="skill-bar"><div class="skill-fill" style="--fill: 92%"></div></div>
+        <span class="skill-percent">92%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">My Journey</span>
+      <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+      <p class="section-subtitle">Building real-world AI solutions through hands-on development</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"><i class="fas fa-robot"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="timeline-header">
+            <h3>AI Developer — Self Projects</h3>
+            <span class="timeline-date"><i class="fas fa-calendar"></i> 2024 – Present</span>
+          </div>
+          <p class="timeline-org"><i class="fas fa-building"></i> Independent / Open Source</p>
+          <ul class="timeline-list">
+            <li><i class="fas fa-check-circle"></i> Built end-to-end Generative AI applications using LangChain and LangGraph</li>
+            <li><i class="fas fa-check-circle"></i> Developed Retrieval-Augmented Generation systems with vector databases (FAISS, Chroma)</li>
+            <li><i class="fas fa-check-circle"></i> Created intelligent chatbot systems including Medical LLM Assistant (EyeCareBot)</li>
+            <li><i class="fas fa-check-circle"></i> Built multimodal AI + Blockchain platform for retinal disease detection</li>
+            <li><i class="fas fa-check-circle"></i> Developed Computer Vision applications with PyTorch and TensorFlow</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">RAG</span>
+            <span class="tag">PyTorch</span><span class="tag">Computer Vision</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item right" data-aos="fade-left">
+        <div class="timeline-dot"><i class="fas fa-chart-bar"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="timeline-header">
+            <h3>Data Science Intern</h3>
+            <span class="timeline-date"><i class="fas fa-calendar"></i> Jun 2024 – Aug 2024</span>
+          </div>
+          <p class="timeline-org"><i class="fas fa-building"></i> Web Begs</p>
+          <ul class="timeline-list">
+            <li><i class="fas fa-check-circle"></i> Performed Exploratory Data Analysis using Pandas and NumPy</li>
+            <li><i class="fas fa-check-circle"></i> Built visualizations with Matplotlib and Seaborn to derive insights</li>
+            <li><i class="fas fa-check-circle"></i> Developed predictive regression models using Scikit-Learn</li>
+            <li><i class="fas fa-check-circle"></i> Preprocessed datasets and feature engineered for improved model performance</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span>
+            <span class="tag">Scikit-Learn</span><span class="tag">EDA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">My Work</span>
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-subtitle">Real-world AI applications built with cutting-edge technologies</p>
+    </div>
+    <div class="projects-filter" data-aos="fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="genai">Generative AI</button>
+      <button class="filter-btn" data-filter="cv">Computer Vision</button>
+      <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      <button class="filter-btn" data-filter="nlp">NLP</button>
+    </div>
+
+    <!-- Featured Project Card -->
+    <div class="featured-project glass-card" data-aos="zoom-in">
+      <div class="featured-badge"><i class="fas fa-star"></i> Featured Project</div>
+      <div class="featured-project-grid">
+        <div class="featured-project-info">
+          <div class="project-year">2025 – 2026</div>
+          <h3 class="featured-title">EyeCareBot</h3>
+          <p class="featured-subtitle">Multimodal AI + Blockchain Platform</p>
+          <p class="featured-description">
+            A comprehensive multimodal AI and Blockchain platform for retinal eye disease detection, powered by a LangChain-driven diagnostic chatbot. The system provides accurate retinal analysis with an intelligent conversational interface for healthcare professionals and patients.
+          </p>
+          <div class="featured-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">LangChain</span>
+            <span class="tech-tag">LangGraph</span>
+            <span class="tech-tag">Blockchain</span>
+            <span class="tech-tag">Computer Vision</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/AbdulRaheempro" target="_blank" class="btn btn-primary btn-sm">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <button class="btn btn-outline btn-sm" onclick="openModal('eyecarebot')">
+              <i class="fas fa-expand"></i> Learn More
+            </button>
+          </div>
+        </div>
+        <div class="featured-project-visual">
+          <div class="project-mockup">
+            <div class="mockup-header"><span></span><span></span><span></span></div>
+            <div class="mockup-content">
+              <div class="ai-visualization">
+                <div class="ai-circle"></div>
+                <div class="ai-lines">
+                  <div class="ai-line"></div>
+                  <div class="ai-line"></div>
+                  <div class="ai-line"></div>
+                  <div class="ai-line"></div>
+                </div>
+                <div class="ai-label">Retinal AI Analysis</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="projects-grid" id="projects-grid">
+      <div class="project-card glass-card" data-category="cv" data-aos="fade-up" data-aos-delay="50" onclick="openModal('pneumonia')">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-lungs"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/AbdulRaheempro/Pneumonia-detection-system" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Pneumonia Detection System</h3>
+        <p class="project-desc">Vision Transformer model trained on chest X-ray datasets. CNN + Transfer Learning approach achieving high accuracy for medical AI diagnosis.</p>
+        <div class="project-tech">
+          <span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>OpenCV</span>
+        </div>
+      </div>
+
+      <div class="project-card glass-card" data-category="genai" data-aos="fade-up" data-aos-delay="100" onclick="openModal('rag-youtube')">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fab fa-youtube"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/AbdulRaheempro" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">RAG YouTube Interaction Bot</h3>
+        <p class="project-desc">Intelligent chatbot that embeds YouTube transcripts into vector databases enabling natural-language Q&A over video content using RAG pipeline.</p>
+        <div class="project-tech">
+          <span>LangChain</span><span>FAISS</span><span>OpenAI</span><span>Python</span>
+        </div>
+      </div>
+
+      <div class="project-card glass-card" data-category="genai" data-aos="fade-up" data-aos-delay="150" onclick="openModal('healthmate')">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/AbdulRaheempro/Ai-Health-Mate" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">AI Health Mate</h3>
+        <p class="project-desc">Web-based AI healthcare chatbot built with Flask and Google Gemini AI. Provides bilingual (English & Urdu) medical guidance with safety-first advice.</p>
+        <div class="project-tech">
+          <span>Flask</span><span>Gemini AI</span><span>Python</span><span>NLP</span>
+        </div>
+      </div>
+
+      <div class="project-card glass-card" data-category="ml" data-aos="fade-up" data-aos-delay="200" onclick="openModal('crop')">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-seedling"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/AbdulRaheempro/Crop-Recommender-System" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Crop Recommender System</h3>
+        <p class="project-desc">ML + Flask web app predicting optimal crop cultivation based on soil nutrients, temperature, and rainfall using Random Forest Classifier (~95% accuracy).</p>
+        <div class="project-tech">
+          <span>Python</span><span>Flask</span><span>Scikit-Learn</span><span>Random Forest</span>
+        </div>
+      </div>
+
+      <div class="project-card glass-card" data-category="nlp" data-aos="fade-up" data-aos-delay="250" onclick="openModal('spam')">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-envelope-open-text"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/AbdulRaheempro/Email-Spam-Classifier" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Email Spam Classifier</h3>
+        <p class="project-desc">NLP-powered spam detection using TF-IDF vectorization and ML classifier. Dark-themed interactive web interface for real-time email analysis.</p>
+        <div class="project-tech">
+          <span>Python</span><span>NLP</span><span>TF-IDF</span><span>Scikit-Learn</span>
+        </div>
+      </div>
+
+      <div class="project-card glass-card" data-category="ml" data-aos="fade-up" data-aos-delay="300" onclick="openModal('movie')">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-film"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/AbdulRaheempro/Ai-Movie-Recommender" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">AI Movie Recommender</h3>
+        <p class="project-desc">Flask-based web app recommending movies using vectorization and cosine similarity via Scikit-learn, analyzing metadata, cast, genres, and keywords.</p>
+        <div class="project-tech">
+          <span>Python</span><span>Flask</span><span>Scikit-Learn</span><span>Cosine Similarity</span>
+        </div>
+      </div>
+
+      <div class="project-card glass-card" data-category="ml" data-aos="fade-up" data-aos-delay="350" onclick="openModal('flight')">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-plane"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/AbdulRaheempro/Flight-Visiion" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Flight Vision Analytics</h3>
+        <p class="project-desc">Interactive Flight Analytics Dashboard with Streamlit, Plotly, and MySQL to search flights, analyze airline trends, and pricing distribution.</p>
+        <div class="project-tech">
+          <span>Python</span><span>Streamlit</span><span>Plotly</span><span>MySQL</span>
+        </div>
+      </div>
+
+      <div class="project-card glass-card" data-category="genai" data-aos="fade-up" data-aos-delay="400" onclick="openModal('medical-llm')">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-stethoscope"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/AbdulRaheempro" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Medical LLM Assistant</h3>
+        <p class="project-desc">Intelligent medical question-answering system using Large Language Models with RAG pipeline to retrieve accurate, context-aware medical information.</p>
+        <div class="project-tech">
+          <span>LangChain</span><span>RAG</span><span>LLM</span><span>FAISS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-cta" data-aos="fade-up">
+      <a href="https://github.com/AbdulRaheempro" target="_blank" class="btn btn-primary">
+        <i class="fab fa-github"></i> View All Projects on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="certifications section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Credentials</span>
+      <h2 class="section-title">Certifications & <span class="gradient-text">Achievements</span></h2>
+      <p class="section-subtitle">Continuous learning from world-class institutions</p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="cert-logo"><i class="fas fa-graduation-cap"></i></div>
+        <div class="cert-content">
+          <h3>Machine Learning Specialization</h3>
+          <p class="cert-issuer"><i class="fas fa-university"></i> Andrew Ng · Stanford University</p>
+          <div class="cert-tags"><span>ML</span><span>Deep Learning</span><span>Neural Networks</span></div>
+        </div>
+        <div class="cert-badge"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="cert-logo"><i class="fas fa-brain"></i></div>
+        <div class="cert-content">
+          <h3>Advanced Learning Algorithms</h3>
+          <p class="cert-issuer"><i class="fas fa-university"></i> Stanford University</p>
+          <div class="cert-tags"><span>Neural Nets</span><span>Optimization</span></div>
+        </div>
+        <div class="cert-badge"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="cert-logo"><i class="fas fa-chart-pie"></i></div>
+        <div class="cert-content">
+          <h3>Data Science Professional Certificate</h3>
+          <p class="cert-issuer"><i class="fas fa-building"></i> Simplilearn</p>
+          <div class="cert-tags"><span>Data Science</span><span>Analytics</span></div>
+        </div>
+        <div class="cert-badge"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="cert-logo"><i class="fas fa-square-root-variable"></i></div>
+        <div class="cert-content">
+          <h3>Probability & Statistics for Data Science</h3>
+          <p class="cert-issuer"><i class="fas fa-play-circle"></i> Udemy</p>
+          <div class="cert-tags"><span>Statistics</span><span>Probability</span></div>
+        </div>
+        <div class="cert-badge"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="cert-logo"><i class="fab fa-hackerrank"></i></div>
+        <div class="cert-content">
+          <h3>Python (Basic) Certificate</h3>
+          <p class="cert-issuer"><i class="fas fa-code"></i> HackerRank</p>
+          <div class="cert-tags"><span>Python</span><span>Programming</span></div>
+        </div>
+        <div class="cert-badge"><i class="fas fa-certificate"></i></div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="education-block" data-aos="fade-up">
+      <div class="section-header" style="margin-top: 4rem;">
+        <span class="section-tag">Academia</span>
+        <h2 class="section-title" style="font-size: 2rem;">Education</h2>
+      </div>
+      <div class="edu-card glass-card">
+        <div class="edu-icon"><i class="fas fa-university"></i></div>
+        <div class="edu-content">
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p class="edu-uni">University of Management and Technology (UMT)</p>
+          <p class="edu-period"><i class="fas fa-calendar"></i> 2022 – 2026</p>
+          <div class="edu-specializations">
+            <span><i class="fas fa-robot"></i> Artificial Intelligence</span>
+            <span><i class="fas fa-brain"></i> Machine Learning</span>
+            <span><i class="fas fa-chart-bar"></i> Data Science</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GitHub Section -->
+<section id="github" class="github-section section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Open Source</span>
+      <h2 class="section-title">GitHub <span class="gradient-text">Activity</span></h2>
+      <p class="section-subtitle">Consistent contributions and open source development</p>
+    </div>
+    <div class="github-profile-card glass-card" data-aos="zoom-in">
+      <div class="github-profile-header">
+        <img src="https://avatars.githubusercontent.com/u/176670939?v=4" alt="Abdul Raheem GitHub" class="github-avatar" />
+        <div class="github-profile-info">
+          <h3>AbdulRaheempro</h3>
+          <p>AI Engineer & Generative AI Developer</p>
+          <a href="https://github.com/AbdulRaheempro" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fab fa-github"></i> Visit GitHub Profile
+          </a>
+        </div>
+      </div>
+      <div class="github-stats-row">
+        <div class="github-stat">
+          <span class="github-stat-num" data-counter="8">8</span>
+          <span class="github-stat-label">Repositories</span>
+        </div>
+        <div class="github-stat">
+          <span class="github-stat-num" data-counter="50">50</span><span>+</span>
+          <span class="github-stat-label">Commits</span>
+        </div>
+        <div class="github-stat">
+          <span class="github-stat-num" data-counter="4">4</span>
+          <span class="github-stat-label">Languages</span>
+        </div>
+        <div class="github-stat">
+          <span class="github-stat-num" data-counter="2024">2024</span>
+          <span class="github-stat-label">Since</span>
+        </div>
+      </div>
+    </div>
+    <!-- GitHub Contribution Graph Embed -->
+    <div class="github-contrib" data-aos="fade-up">
+      <img src="https://ghchart.rshah.org/7C3AED/AbdulRaheempro" alt="Abdul Raheem GitHub Contribution Chart" class="github-chart" onerror="this.style.display='none'" />
+    </div>
+    <div class="github-langs" data-aos="fade-up">
+      <h3 class="langs-title">Languages Used</h3>
+      <div class="langs-bar">
+        <div class="lang-segment" style="--width: 75%; --color: #3776AB;" title="Python 75%">
+          <span>Python 75%</span>
+        </div>
+        <div class="lang-segment" style="--width: 15%; --color: #DA8B45;" title="Jupyter Notebook 15%">
+          <span>Jupyter 15%</span>
+        </div>
+        <div class="lang-segment" style="--width: 10%; --color: #E34C26;" title="HTML/CSS 10%">
+          <span>HTML 10%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+      <p class="section-subtitle">Open to collaborations, opportunities, and interesting AI projects</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <div class="contact-card glass-card">
+          <i class="fas fa-envelope"></i>
+          <h4>Email</h4>
+          <a href="mailto:abdulraheemstd@gmail.com">abdulraheemstd@gmail.com</a>
+        </div>
+        <div class="contact-card glass-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Location</h4>
+          <p>Lahore, Pakistan</p>
+        </div>
+        <div class="contact-card glass-card">
+          <i class="fab fa-linkedin-in"></i>
+          <h4>LinkedIn</h4>
+          <a href="https://www.linkedin.com/in/abdul-raheem-b47531286/" target="_blank">Connect on LinkedIn</a>
+        </div>
+        <div class="contact-card glass-card">
+          <i class="fab fa-github"></i>
+          <h4>GitHub</h4>
+          <a href="https://github.com/AbdulRaheempro" target="_blank">AbdulRaheempro</a>
+        </div>
+        <div class="contact-social-links">
+          <a href="https://github.com/AbdulRaheempro" target="_blank" class="social-link-lg" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/abdul-raheem-b47531286/" target="_blank" class="social-link-lg" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:abdulraheemstd@gmail.com" class="social-link-lg" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-wrapper" data-aos="fade-left">
+        <form class="contact-form glass-card" id="contact-form" onsubmit="handleSubmit(event)">
+          <h3>Send a Message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div id="form-feedback" class="form-feedback"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Placeholder -->
+<section id="blog" class="blog-placeholder section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Coming Soon</span>
+      <h2 class="section-title">AI <span class="gradient-text">Blog</span></h2>
+      <p class="section-subtitle">Insights, tutorials and explorations in AI & Machine Learning</p>
+    </div>
+    <div class="blog-coming-soon glass-card" data-aos="zoom-in">
+      <i class="fas fa-pen-nib blog-icon"></i>
+      <h3>Blog Coming Soon</h3>
+      <p>I'll be sharing articles on Generative AI, RAG systems, LangChain, and my AI project journey. Stay tuned!</p>
+      <a href="mailto:abdulraheemstd@gmail.com" class="btn btn-primary">
+        <i class="fas fa-bell"></i> Get Notified
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-bg"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo footer-logo">
+          <span class="logo-bracket">&lt;</span>AR<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p>AI Engineer & Generative AI Developer building intelligent systems for the future.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/AbdulRaheempro" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/abdul-raheem-b47531286/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:abdulraheemstd@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="#projects">EyeCareBot</a></li>
+          <li><a href="#projects">RAG YouTube Bot</a></li>
+          <li><a href="#projects">AI Health Mate</a></li>
+          <li><a href="https://github.com/AbdulRaheempro" target="_blank">All Projects</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:abdulraheemstd@gmail.com">Email Me</a></li>
+          <li><a href="https://www.linkedin.com/in/abdul-raheem-b47531286/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/AbdulRaheempro" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Abdul Raheem. Crafted with <i class="fas fa-heart"></i> and AI.</p>
+      <p>Lahore, Pakistan 🇵🇰</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Project Modal -->
+<div id="project-modal" class="modal-overlay" onclick="closeModal()">
+  <div class="modal-content glass-card" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

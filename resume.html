@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Raheem — Resume | AI Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* =========================================
+       SCREEN STYLES — Preview before printing
+       ========================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* ---- Top Action Bar (screen only) ---- */
+    .action-bar {
+      background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+    }
+    .action-bar span {
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .action-bar span::before { content: '📄'; }
+    .action-bar-btns { display: flex; gap: 10px; }
+    .btn-print {
+      padding: 8px 20px;
+      background: #fff;
+      color: #7C3AED;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .btn-print:hover { background: #EDE9FE; transform: translateY(-1px); }
+    .btn-back {
+      padding: 8px 16px;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .btn-back:hover { background: rgba(255,255,255,0.25); }
+
+    /* ---- Resume Paper Container ---- */
+    .resume-wrapper {
+      max-width: 820px;
+      margin: 30px auto;
+      background: #ffffff;
+      box-shadow: 0 8px 50px rgba(0,0,0,0.15);
+      border-radius: 4px;
+    }
+    .resume {
+      padding: 44px 48px;
+    }
+
+    /* =========================================
+       RESUME CONTENT STYLES
+       ========================================= */
+
+    /* Header */
+    .r-header { border-bottom: 2px solid #1a1a2e; padding-bottom: 14px; margin-bottom: 16px; }
+    .r-name {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #1a1a2e;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 3px;
+    }
+    .r-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #4338CA;
+      margin-bottom: 8px;
+      letter-spacing: 0.01em;
+    }
+    .r-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 20px;
+      font-size: 0.78rem;
+      color: #555;
+      align-items: center;
+    }
+    .r-contact a { color: #4338CA; text-decoration: none; font-weight: 500; }
+    .r-contact a:hover { text-decoration: underline; }
+    .r-contact span { color: #999; }
+
+    /* Section */
+    .r-section { margin-bottom: 14px; }
+    .r-section-title {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #1a1a2e;
+      border-bottom: 1.5px solid #1a1a2e;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    /* Summary */
+    .r-summary {
+      font-size: 0.83rem;
+      color: #333;
+      line-height: 1.65;
+    }
+
+    /* Skills */
+    .r-skills-grid { display: flex; flex-direction: column; gap: 4px; }
+    .r-skill-row { font-size: 0.8rem; color: #333; line-height: 1.5; }
+    .r-skill-label { font-weight: 700; color: #1a1a2e; }
+
+    /* Experience */
+    .r-exp-item { margin-bottom: 10px; }
+    .r-exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 2px;
+    }
+    .r-exp-role {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .r-exp-date {
+      font-size: 0.76rem;
+      color: #555;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .r-exp-org {
+      font-size: 0.78rem;
+      color: #4338CA;
+      font-weight: 500;
+      margin-bottom: 5px;
+      font-style: italic;
+    }
+    .r-exp-bullets { list-style: none; padding: 0; }
+    .r-exp-bullets li {
+      font-size: 0.8rem;
+      color: #333;
+      line-height: 1.6;
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 2px;
+    }
+    .r-exp-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #4338CA;
+      font-size: 0.7rem;
+      top: 1px;
+    }
+
+    /* Education */
+    .r-edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .r-edu-degree {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .r-edu-date {
+      font-size: 0.76rem;
+      color: #555;
+      white-space: nowrap;
+    }
+    .r-edu-uni {
+      font-size: 0.8rem;
+      color: #555;
+      margin-top: 2px;
+    }
+    .r-edu-spec {
+      font-size: 0.78rem;
+      color: #4338CA;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+
+    /* Projects */
+    .r-projects-list { display: flex; flex-direction: column; gap: 6px; }
+    .r-project-item { font-size: 0.8rem; color: #333; line-height: 1.55; }
+    .r-project-name { font-weight: 700; color: #1a1a2e; }
+    .r-project-stack { color: #666; font-style: italic; }
+    .r-project-stack strong { color: #4338CA; font-style: normal; }
+
+    /* Certifications */
+    .r-cert-list { display: flex; flex-direction: column; gap: 4px; }
+    .r-cert-item { font-size: 0.8rem; color: #333; line-height: 1.5; }
+    .r-cert-item span { font-weight: 700; color: #1a1a2e; }
+    .r-cert-issuer { color: #4338CA; font-weight: 500; }
+
+    /* Languages */
+    .r-langs {
+      font-size: 0.82rem;
+      color: #333;
+    }
+    .r-langs strong { color: #1a1a2e; }
+
+    /* =========================================
+       PRINT STYLES — Exact PDF output
+       ========================================= */
+    @media print {
+      @page {
+        size: A4;
+        margin: 16mm 16mm 14mm 16mm;
+      }
+
+      body { background: #fff; }
+      .action-bar { display: none !important; }
+      .resume-wrapper {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .resume { padding: 0; }
+
+      a { color: #4338CA !important; text-decoration: none; }
+      a[href]::after { content: none !important; }
+
+      .r-section { page-break-inside: avoid; }
+      .r-exp-item { page-break-inside: avoid; }
+    }
+
+    /* ---- Responsive screen ---- */
+    @media (max-width: 860px) {
+      .resume { padding: 30px 24px; }
+    }
+    @media (max-width: 560px) {
+      .resume { padding: 20px 16px; }
+      .r-name { font-size: 1.6rem; }
+      .action-bar span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Screen-only Action Bar -->
+<div class="action-bar">
+  <span>Abdul Raheem — Resume Preview</span>
+  <div class="action-bar-btns">
+    <a href="index.html" class="btn-back">← Back to Portfolio</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Download / Print PDF</button>
+  </div>
+</div>
+
+<!-- Resume Paper -->
+<div class="resume-wrapper">
+  <div class="resume">
+
+    <!-- HEADER -->
+    <header class="r-header">
+      <div class="r-name">Abdul Raheem</div>
+      <div class="r-title">Artificial Intelligence Developer</div>
+      <div class="r-contact">
+        <span>Lahore, PK</span>
+        <span>|</span>
+        <span>+92 315-0707693</span>
+        <span>|</span>
+        <a href="mailto:abdulraheemstd@gmail.com">abdulraheemstd@gmail.com</a>
+        <span>|</span>
+        <a href="https://www.linkedin.com/in/abdul-raheem-b47531286/" target="_blank">LinkedIn</a>
+        <span>|</span>
+        <a href="https://github.com/AbdulRaheempro" target="_blank">GitHub</a>
+      </div>
+    </header>
+
+    <!-- SUMMARY -->
+    <section class="r-section">
+      <div class="r-section-title">Summary</div>
+      <p class="r-summary">
+        Final-year CS student specialising in AI/ML with 1+ year building Generative AI systems (RAG, LangChain, LangGraph), deep learning models (Transformers, CNNs, LSTMs), and end-to-end data science pipelines. Delivered full-stack AI solutions across healthcare, agriculture, and computer vision domains.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="r-section">
+      <div class="r-section-title">Skills</div>
+      <div class="r-skills-grid">
+        <div class="r-skill-row">
+          <span class="r-skill-label">Generative AI:</span> RAG, LangChain, LangGraph, Prompt Engineering, LLM Chatbot Development
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Deep Learning:</span> Transformers (ViT, BERT), CNNs, RNNs, LSTMs, GANs, Transfer Learning
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Machine Learning:</span> Supervised/Unsupervised, Regression, Classification, Random Forest, XGBoost
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Languages &amp; Frameworks:</span> Python, NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Tools &amp; Platforms:</span> Git &amp; GitHub, FastAPI, Jupyter Notebooks, Google Colab
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="r-section">
+      <div class="r-section-title">Work Experience</div>
+
+      <div class="r-exp-item">
+        <div class="r-exp-header">
+          <div class="r-exp-role">AI Developer</div>
+          <div class="r-exp-date">2024 – Present</div>
+        </div>
+        <div class="r-exp-org">Personal AI Projects (Self-Initiated)</div>
+        <ul class="r-exp-bullets">
+          <li>Engineered end-to-end AI pipelines using LangChain &amp; LangGraph for production-ready chatbot systems.</li>
+          <li>Architected RAG systems with vector databases; built Medical LLM Assistant, YouTube Bot &amp; Pneumonia Detection independently.</li>
+          <li>Fine-tuned transformer-based models (CNNs, RNNs, LSTMs) for CV and NLP tasks across multiple self-initiated projects.</li>
+        </ul>
+      </div>
+
+      <div class="r-exp-item">
+        <div class="r-exp-header">
+          <div class="r-exp-role">Data Science Intern</div>
+          <div class="r-exp-date">Jun – Aug 2024</div>
+        </div>
+        <div class="r-exp-org">Web Begs</div>
+        <ul class="r-exp-bullets">
+          <li>Executed EDA on multi-source datasets using Pandas &amp; NumPy, built Matplotlib/Seaborn dashboards for stakeholders.</li>
+          <li>Designed and validated Scikit-learn regression models with cross-validation to optimise generalisation performance.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="r-section">
+      <div class="r-section-title">Education</div>
+      <div class="r-edu-header">
+        <div class="r-edu-degree">Bachelor of Science in Computer Science</div>
+        <div class="r-edu-date">2022 – 2026</div>
+      </div>
+      <div class="r-edu-uni">University of Management and Technology (UMT), Lahore</div>
+      <div class="r-edu-spec">Specialisation: AI | Machine Learning &amp; Data Science &nbsp;•&nbsp; 6th Semester</div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="r-section">
+      <div class="r-section-title">Projects</div>
+      <div class="r-projects-list">
+        <div class="r-project-item">
+          <span class="r-project-name">EyeCareBot (FYP):</span> Multimodal AI + blockchain platform for retinal eye-disease detection with LangChain diagnostic chatbot.
+          <span class="r-project-stack"><strong>Stack:</strong> Python, PyTorch, LangChain, Blockchain</span>
+        </div>
+        <div class="r-project-item">
+          <span class="r-project-name">Pneumonia Detection:</span> Vision Transformer on chest X-rays with transfer learning for high-accuracy classification.
+          <span class="r-project-stack"><strong>Stack:</strong> Python, PyTorch, OpenCV</span>
+        </div>
+        <div class="r-project-item">
+          <span class="r-project-name">RAG YouTube Bot:</span> Embeds &amp; indexes video transcripts; answers natural-language queries via LangChain retrieval chains.
+          <span class="r-project-stack"><strong>Stack:</strong> Python, LangChain, FAISS</span>
+        </div>
+        <div class="r-project-item">
+          <span class="r-project-name">Medical LLM Assistant:</span> LangGraph multi-agent chatbot routing symptom queries through specialised triage sub-agents.
+        </div>
+        <div class="r-project-item">
+          <span class="r-project-name">Other:</span> Crop Recommendation (RF/XGBoost) &nbsp;|&nbsp; Predictive House Pricing (Ridge/Lasso) &nbsp;|&nbsp; Movie Recommender (Collaborative Filtering)
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="r-section">
+      <div class="r-section-title">Certifications</div>
+      <div class="r-cert-list">
+        <div class="r-cert-item">
+          <span>Machine Learning Specialization</span> — <span class="r-cert-issuer">Andrew Ng | DeepLearning.AI &amp; Stanford University</span>
+        </div>
+        <div class="r-cert-item">
+          <span>Advanced Learning Algorithms</span> — <span class="r-cert-issuer">Stanford University &amp; DeepLearning.AI</span>
+        </div>
+        <div class="r-cert-item">
+          <span>Data Science Professional Certificate</span> — <span class="r-cert-issuer">Simplilearn</span>
+        </div>
+        <div class="r-cert-item">
+          <span>Python (Basic) Certificate</span> — <span class="r-cert-issuer">HackerRank</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section class="r-section">
+      <div class="r-section-title">Languages</div>
+      <div class="r-langs">
+        <strong>Urdu</strong> (Native) &nbsp;|&nbsp; <strong>English</strong> (Professional) &nbsp;|&nbsp; <strong>German</strong> (Elementary)
+      </div>
+    </section>
+
+  </div><!-- /resume -->
+</div><!-- /resume-wrapper -->
+
+</body>
+</html>
